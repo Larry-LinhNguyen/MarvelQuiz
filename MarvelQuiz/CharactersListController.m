@@ -45,7 +45,7 @@
 
 #pragma mark - Methods
 
-//Downloading the Data and Parsing
+///Downloading the Data and Parsing
 -(void)getData {
     NSLog(@"offset: %d", _networkManager.offset);
     
