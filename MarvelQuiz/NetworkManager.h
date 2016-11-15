@@ -10,7 +10,12 @@
 
 @interface NetworkManager : NSObject
 
+@property (nonatomic) int limit;
+@property (nonatomic) int offset;
+
+
 // Designated initializer
 - (NSString *) getUrlPath;
+- (void) increaseOffset;
 
 @end

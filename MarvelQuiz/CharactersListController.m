@@ -11,6 +11,8 @@
 #import "NetworkManager.h"
 
 @interface CharactersListController ()
+@property (nonatomic) int maxCharactersToRequests;
+@property (nonatomic) NetworkManager *networkManager;
 
 @end
 
@@ -19,16 +21,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    
+    ///This Array contains all the Marvel Characters
     self.marvelCharacters = [[NSMutableArray alloc] init];
     
-    [self getData];
+    ///This is the Network Manager
+    self.networkManager = [NetworkManager alloc];
+    
+    #warning should not use a magic number. For the future try to fix this
+    ///This is the max number of characters aviable in the Marvel API
+    self.maxCharactersToRequests = 1400;
+
+    //Downloading the data
+    while(self.networkManager.offset <= self.maxCharactersToRequests) {
+        [self getData];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,70 +44,79 @@
 }
 
 #pragma mark - Methods
-
 -(void)getData {
-    NetworkManager *networkManager = [NetworkManager alloc];
+    NSLog(@"offset: %d", _networkManager.offset);
+    
+    //We increase the offset for the next request
+    [self.networkManager increaseOffset];
+    
+    //Making the request
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager GET:networkManager.getUrlPath parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
-        [self parseResponseData:responseObject];
+    [manager GET:self.networkManager.getUrlPath parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        //NSLog(@"JSON: %@", responseObject);
+        
+        ///This array contains all the downloaded characters for a single request
+        NSArray *marvelArray = [[responseObject objectForKey:@"data"] objectForKey:@"results"];
+        
+        //if the results request isn't empty
+        if (marvelArray.count > 0) {
+            NSLog(@"request completed... Going for the next one...");
+            //for each character
+            for(NSDictionary* marvel in marvelArray) {
+                //creating a character
+                Character *currentMarvelEntity = [[Character alloc] initWithMarvel:marvel];
+                //pushing the character into the collection of characters
+                [self.marvelCharacters addObject:currentMarvelEntity];
+            }
+            //Sorting the collection
+            NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+            NSArray *sortedArray = [self.marvelCharacters sortedArrayUsingDescriptors: [NSArray arrayWithObject:sortDescriptor]];
+            self.marvelCharacters =  [sortedArray mutableCopy];
+            
+            //Reloading the table
+            [self.tableView reloadData];
+            
+        //If the results request is empty
+        } else {
+            NSLog(@"no more data to download....");
+        }
+
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
     
-    /*
-     [manager GET:@"https://gateway.marvel.com/v1/public/characters?ts=1&apikey=da1dad4d3eb6bcf803e0a9af78e6176c&hash=8768e3b957f91dc377a30f8e1b32d158" parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-     NSLog(@"JSON: %@", responseObject);
-     [self parseResponseData:responseObject];
-     } failure:^(NSURLSessionTask *operation, NSError *error) {
-     NSLog(@"Error: %@", error);
-     }];
-     */
-}
 
-
-#pragma mark - Parsing Method
-
--(void)parseResponseData:(NSDictionary *)responseDictionary {
-    NSArray *marvelArray = [[responseDictionary objectForKey:@"data"] objectForKey:@"results"];
-    for(NSDictionary* marvel in marvelArray)
-    {
-        Character *currentMarvelEntity = [[Character alloc] initWithMarvel:marvel];
-        NSLog(@"currentMarvelEntity %@", currentMarvelEntity.name);
-        [self.marvelCharacters addObject:currentMarvelEntity];
-    }
-    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 
+//The number of sections
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
+//The number of rows
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.marvelCharacters.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
     
+    //For the cell with identifier = "characterCell"
     static NSString *CellIdentifier = @"characterCell";
-    CharacterCellController *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
+    //creating a cell
+    CharacterCellController *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[CharacterCellController alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    
+    //Popolating the cell
     Character *marvelData = [self.marvelCharacters objectAtIndex:indexPath.row];
     cell.characterNameLabel.text = marvelData.name;
     
-    /*
-    UIImageView *marvelImageView = (UIImageView *)[cell viewWithTag:100];
-    [marvelImageView setImageWithURL:[NSURL URLWithString:marvelData.thumbnailImageURL]];
-    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-     */
-    
+    //Done
     return cell;
 
 }
