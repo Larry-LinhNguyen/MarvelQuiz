@@ -13,6 +13,7 @@
 		01BE26421DDB638500DABA3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01BE26401DDB638500DABA3E /* Main.storyboard */; };
 		01BE26441DDB638500DABA3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BE26431DDB638500DABA3E /* Assets.xcassets */; };
 		01BE26471DDB638500DABA3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01BE26451DDB638500DABA3E /* LaunchScreen.storyboard */; };
+		4B14A14B1126E921FC0AA5B9 /* libPods-MarvelQuiz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7EAC7F3E03311362904316 /* libPods-MarvelQuiz.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		01BE26431DDB638500DABA3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01BE26461DDB638500DABA3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01BE26481DDB638500DABA3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09EB2052A4BE01391063572C /* Pods-MarvelQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelQuiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelQuiz/Pods-MarvelQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		1E7EAC7F3E03311362904316 /* libPods-MarvelQuiz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MarvelQuiz.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C74FA923181D851F729C5DBD /* Pods-MarvelQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelQuiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelQuiz/Pods-MarvelQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B14A14B1126E921FC0AA5B9 /* libPods-MarvelQuiz.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				01BE26361DDB638500DABA3E /* MarvelQuiz */,
 				01BE26351DDB638500DABA3E /* Products */,
+				08848E319AAABA6E43A7DE6F /* Pods */,
+				E1848AF5DAEA4C30A16D30B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +86,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		08848E319AAABA6E43A7DE6F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C74FA923181D851F729C5DBD /* Pods-MarvelQuiz.debug.xcconfig */,
+				09EB2052A4BE01391063572C /* Pods-MarvelQuiz.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E1848AF5DAEA4C30A16D30B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E7EAC7F3E03311362904316 /* libPods-MarvelQuiz.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01BE264B1DDB638500DABA3E /* Build configuration list for PBXNativeTarget "MarvelQuiz" */;
 			buildPhases = (
+				90173FC2904160CB53950971 /* [CP] Check Pods Manifest.lock */,
 				01BE26301DDB638500DABA3E /* Sources */,
 				01BE26311DDB638500DABA3E /* Frameworks */,
 				01BE26321DDB638500DABA3E /* Resources */,
+				358E12F3C727B4D22F3DDC42 /* [CP] Embed Pods Frameworks */,
+				58258148DECB0759DC8672EA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +172,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		358E12F3C727B4D22F3DDC42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarvelQuiz/Pods-MarvelQuiz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58258148DECB0759DC8672EA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarvelQuiz/Pods-MarvelQuiz-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90173FC2904160CB53950971 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		01BE26301DDB638500DABA3E /* Sources */ = {
@@ -269,6 +344,7 @@
 		};
 		01BE264C1DDB638500DABA3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C74FA923181D851F729C5DBD /* Pods-MarvelQuiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 23536XD8LD;
@@ -281,6 +357,7 @@
 		};
 		01BE264D1DDB638500DABA3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09EB2052A4BE01391063572C /* Pods-MarvelQuiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 23536XD8LD;
