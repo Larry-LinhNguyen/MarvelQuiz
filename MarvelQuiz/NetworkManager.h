@@ -10,9 +10,6 @@
 
 @interface NetworkManager : NSObject
 
-@property (nonatomic, copy) NSString *publicKey;
-@property (nonatomic, copy) NSString *secretKey;
-
 // Designated initializer
 - (NSString *) getUrlPath;
 
