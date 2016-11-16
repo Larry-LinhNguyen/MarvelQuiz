@@ -23,14 +23,13 @@
     //Setting the name of the character
     self.nameLabel.text = self.character.name;
     
+    //Setting the description of the character
     if ([self.character.characterDescription  isEqual: @""]) {
         self.descriptionLabel.text = @"Missing description for this character...";
     } else {
         self.descriptionLabel.text = self.character.characterDescription;
     }
     
-    //Setting the description of the character
-    //self.descriptionLabel.text = self.character.characterDescription;
     
     //Setting the image of the cgaracter
 #warning this should be async, and the image should be cached
