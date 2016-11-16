@@ -8,6 +8,7 @@
 
 #import "CharactersListController.h"
 #import "CharacterCellController.h"
+#import "CharacterDetailsController.h"
 #import "NetworkManager.h"
 
 @interface CharactersListController ()
@@ -55,7 +56,7 @@
     //Making the request
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:self.networkManager.getUrlPath parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        //NSLog(@"JSON: %@", responseObject);
+        NSLog(@"JSON: %@", responseObject);
         
         ///This array contains all the downloaded characters for a single request
         NSArray *marvelArray = [[responseObject objectForKey:@"data"] objectForKey:@"results"];
@@ -123,14 +124,22 @@
 
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"showDetails"]) {
+        NSIndexPath *section = [self.tableView indexPathForSelectedRow];
+        
+        CharacterDetailsController *controller = [segue destinationViewController];
+        controller.character = self.marvelCharacters[section.row];
+    }
+    
 }
-*/
+
 
 @end

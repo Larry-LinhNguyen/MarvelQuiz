@@ -18,6 +18,7 @@
 		01BE26561DDB6A1700DABA3E /* CharacterCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE26551DDB6A1700DABA3E /* CharacterCellController.m */; };
 		01BE26591DDB6E0800DABA3E /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE26581DDB6E0800DABA3E /* NetworkManager.m */; };
 		01BE265C1DDB7BA700DABA3E /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE265B1DDB7BA700DABA3E /* NSString+MD5.m */; };
+		01BE265F1DDC694400DABA3E /* CharacterDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE265E1DDC694400DABA3E /* CharacterDetailsController.m */; };
 		4B14A14B1126E921FC0AA5B9 /* libPods-MarvelQuiz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7EAC7F3E03311362904316 /* libPods-MarvelQuiz.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,8 @@
 		01BE26581DDB6E0800DABA3E /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		01BE265A1DDB7B8000DABA3E /* NSString+MD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		01BE265B1DDB7BA700DABA3E /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		01BE265D1DDC694400DABA3E /* CharacterDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterDetailsController.h; sourceTree = "<group>"; };
+		01BE265E1DDC694400DABA3E /* CharacterDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterDetailsController.m; sourceTree = "<group>"; };
 		09EB2052A4BE01391063572C /* Pods-MarvelQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelQuiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelQuiz/Pods-MarvelQuiz.release.xcconfig"; sourceTree = "<group>"; };
 		1E7EAC7F3E03311362904316 /* libPods-MarvelQuiz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MarvelQuiz.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C74FA923181D851F729C5DBD /* Pods-MarvelQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelQuiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelQuiz/Pods-MarvelQuiz.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +102,8 @@
 				01BE26581DDB6E0800DABA3E /* NetworkManager.m */,
 				01BE265A1DDB7B8000DABA3E /* NSString+MD5.h */,
 				01BE265B1DDB7BA700DABA3E /* NSString+MD5.m */,
+				01BE265D1DDC694400DABA3E /* CharacterDetailsController.h */,
+				01BE265E1DDC694400DABA3E /* CharacterDetailsController.m */,
 			);
 			path = MarvelQuiz;
 			sourceTree = "<group>";
@@ -167,7 +172,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 01BE262F1DDB638500DABA3E /* Build configuration list for PBXProject "MarvelQuiz" */;
+			buildConfigurationList = 01BE262F1DDB638500DABA3E /* Build configuration list for PBXProject "MarvelFun" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -259,6 +264,7 @@
 				01BE26561DDB6A1700DABA3E /* CharacterCellController.m in Sources */,
 				01BE263C1DDB638500DABA3E /* AppDelegate.m in Sources */,
 				01BE26391DDB638500DABA3E /* main.m in Sources */,
+				01BE265F1DDC694400DABA3E /* CharacterDetailsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +407,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		01BE262F1DDB638500DABA3E /* Build configuration list for PBXProject "MarvelQuiz" */ = {
+		01BE262F1DDB638500DABA3E /* Build configuration list for PBXProject "MarvelFun" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01BE26491DDB638500DABA3E /* Debug */,
