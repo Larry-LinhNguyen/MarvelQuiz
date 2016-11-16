@@ -172,7 +172,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 01BE262F1DDB638500DABA3E /* Build configuration list for PBXProject "MarvelFun" */;
+			buildConfigurationList = 01BE262F1DDB638500DABA3E /* Build configuration list for PBXProject "MarvelQuiz" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -407,7 +407,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		01BE262F1DDB638500DABA3E /* Build configuration list for PBXProject "MarvelFun" */ = {
+		01BE262F1DDB638500DABA3E /* Build configuration list for PBXProject "MarvelQuiz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01BE26491DDB638500DABA3E /* Debug */,

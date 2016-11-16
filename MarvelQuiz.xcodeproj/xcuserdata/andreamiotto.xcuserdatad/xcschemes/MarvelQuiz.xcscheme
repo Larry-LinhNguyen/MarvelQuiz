@@ -17,7 +17,7 @@
                BlueprintIdentifier = "01BE26331DDB638500DABA3E"
                BuildableName = "MarvelQuiz.app"
                BlueprintName = "MarvelQuiz"
-               ReferencedContainer = "container:MarvelFun.xcodeproj">
+               ReferencedContainer = "container:MarvelQuiz.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "01BE26331DDB638500DABA3E"
             BuildableName = "MarvelQuiz.app"
             BlueprintName = "MarvelQuiz"
-            ReferencedContainer = "container:MarvelFun.xcodeproj">
+            ReferencedContainer = "container:MarvelQuiz.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "01BE26331DDB638500DABA3E"
             BuildableName = "MarvelQuiz.app"
             BlueprintName = "MarvelQuiz"
-            ReferencedContainer = "container:MarvelFun.xcodeproj">
+            ReferencedContainer = "container:MarvelQuiz.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "01BE26331DDB638500DABA3E"
             BuildableName = "MarvelQuiz.app"
             BlueprintName = "MarvelQuiz"
-            ReferencedContainer = "container:MarvelFun.xcodeproj">
+            ReferencedContainer = "container:MarvelQuiz.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
