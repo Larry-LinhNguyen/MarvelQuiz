@@ -13,10 +13,10 @@
 static const NSString *MARVEL_BASE_URL = @"https://gateway.marvel.com/v1/public/";
 
 ///You should use you Public Key
-static const NSString *PUBLIC_KEY = @"a180e24719a54c0abd6fefba9577fe05";
+static const NSString *PUBLIC_KEY = @"";
 
 ///You should use you Private Key
-static const NSString *PRIVATE_KEY = @"a48215e2ea333a976e6c14aaba34f97d74a153c6";
+static const NSString *PRIVATE_KEY = @"";
 
 @interface NetworkManager ()
 
