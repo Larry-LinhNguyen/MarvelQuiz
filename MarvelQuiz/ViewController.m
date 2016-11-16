@@ -25,5 +25,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)quizCalling:(id)sender {
+    
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Quiz is coming"
+                                                                   message:@"We are working to implement this feature, stay connect..."
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
 
 @end

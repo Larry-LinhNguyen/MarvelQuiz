@@ -56,7 +56,7 @@
     //Making the request
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:self.networkManager.getUrlPath parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+        //NSLog(@"JSON: %@", responseObject);
         
         ///This array contains all the downloaded characters for a single request
         NSArray *marvelArray = [[responseObject objectForKey:@"data"] objectForKey:@"results"];
