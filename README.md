@@ -61,6 +61,8 @@ you should insert your API KEYs.
 
 6- Sinitize for web string will be added.
 
+7- A search bar for a fast filtering will be added into the characters list.
+
 -----
 
 Anyone is free to download and use this app for their projects.
