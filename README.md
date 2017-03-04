@@ -25,9 +25,9 @@ This is a list of the features:
 
 2- Fast Networking Requests: the app uses the <a href="https://developer.marvel.com">AFNetworking</a> library to send request to the API .
 
-6- Character Details: you can read some details for any character you have selected.
+3- Character Details: you can read some details for any character you have selected.
 
-7- Awesome comments: all the files are pretty commented and well documented, you can't lose yourself.
+4- Awesome comments: all the files are pretty commented and well documented, you can't lose yourself.
 
 ## How To Use
 
