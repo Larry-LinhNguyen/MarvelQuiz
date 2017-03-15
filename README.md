@@ -1,7 +1,7 @@
 # MarvelQuiz
 An iOS App that uses the Marvel API to display characters.
 
-##Snapshots
+## Snapshots
 
 <img width="270" alt="home" src="https://cloud.githubusercontent.com/assets/11211914/20346506/a742977a-abfc-11e6-9569-f9aade23518a.png">
 <img width="270" alt="spiderman" src="https://cloud.githubusercontent.com/assets/11211914/20346505/a741d5a6-abfc-11e6-8be8-76fcada30adf.gif">
@@ -17,7 +17,7 @@ It takes the data form the <a href="https://developer.marvel.com">Marvel API</a>
 The main purpose of this project is to demonstrate proficiency with Objective-C even if my main language is Swift.
 
 
-##Features
+## Features
 
 This is a list of the features:
 
