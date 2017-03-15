@@ -3,9 +3,7 @@ An iOS App that uses the Marvel API to display characters.
 
 ## Snapshots
 
-<img width="270" alt="home" src="https://cloud.githubusercontent.com/assets/11211914/20346506/a742977a-abfc-11e6-9569-f9aade23518a.png">
-<img width="270" alt="spiderman" src="https://cloud.githubusercontent.com/assets/11211914/20346505/a741d5a6-abfc-11e6-8be8-76fcada30adf.gif">
-<img width="270" alt="ironman" src="https://cloud.githubusercontent.com/assets/11211914/20346507/a746c32c-abfc-11e6-8595-cacea4d3b9c2.gif">
+<img width="270" alt="home" src="https://cloud.githubusercontent.com/assets/11211914/20346506/a742977a-abfc-11e6-9569-f9aade23518a.png"><img width="270" alt="spiderman" src="https://cloud.githubusercontent.com/assets/11211914/20346505/a741d5a6-abfc-11e6-8be8-76fcada30adf.gif"><img width="270" alt="ironman" src="https://cloud.githubusercontent.com/assets/11211914/20346507/a746c32c-abfc-11e6-8595-cacea4d3b9c2.gif">
 
 ## Explanation
 The Marvel Quiz is an Objective-C app builded during the Techdegree at <a href="https://teamtreehouse.com">Treehouse</a>
@@ -72,7 +70,7 @@ In addition anyone who decides to download this app is invited to create a new b
 For any questions or problems, please contact me.
 If you find bugs or problems, please report them.
 
-##Techdegree's Instruction Project
+## Techdegree's Instruction Project
 
 >For this project you will create an app, written entirely in Objective-C, that makes use of CollectionViews, Asynchronous Networking, Gestures and Transitions. You can certainly incorporate other features and tools, but be sure you also make use of those four listed. In addition, the CollectionViewCells must be interactive in a meaningful way and networking should make use of proper error handling.
 
